@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Students list</title>
+    </head>
+    <body>
+        <h1>Student list</h1>
+
+        <table border = "1">
+            <thred>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                     <th>
+                        Surname
+                    </th>
+                     <th>
+                        Major
+                    </th>
+                     <th>
+                        Year_of_study
+                    </th>
+                     <th>
+                        Faculty
+                    </th>
+                </tr>
+            </thred>
+            <tbody>
+             {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.surname }}</td>
+                <td>{{ student.major }}</td>
+                <td>{{ student.year_of_study }}</td>
+                <td>{{ student.faculty }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </body>
+</html>
