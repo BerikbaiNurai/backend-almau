@@ -1,0 +1,13 @@
+<!-- templates/todo_detail.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="mb-3">{{ todo.title }}</h3>
+<p><strong>description:</strong> {{ todo.description }}</p>
+<p><strong>date:</strong> {{ todo.due_date }}</p>
+<p><strong>status:</strong> {{ todo.status|yesno:"Да,Нет" }}</p>
+
+<a href="/todos/" class="btn btn-secondary">backspase </a>
+<a href="/todos/{{ todo.id }}/delete" class="btn btn-danger">Delete</a>
+<a href="/todos/{{ todo.id }}/edit/" class="btn btn-warning">Edit</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+<!-- templates/todo_form.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h3 class="mb-4"> new todo</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/todos/" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

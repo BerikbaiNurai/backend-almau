@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Courses list</title>
+    </head>
+    <body>
+        <h1>Course list</h1>
+
+        <table border = "1">
+            <thred>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                     <th>
+                        Text
+                    </th>
+                     <th>
+                        Author
+                    </th>
+                </tr>
+            </thred>
+            <tbody>
+             {% for course in courses %}
+            <tr>
+                <td>{{ course.id }}</td>
+                <td>{{ course.title }}</td>
+                <td>{{ course.text }}</td>
+                <td>{{ course.author }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </body>
+</html>
